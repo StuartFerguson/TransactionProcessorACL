@@ -16,6 +16,8 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2.3.4   
+      with:
+        fetch-depth: 0
 
     - name: Restore Nuget Packages
       run: dotnet restore TransactionProcessorACL.sln --source https://api.nuget.org/v3/index.json --source https://www.myget.org/F/transactionprocessing/api/v3/index.json
